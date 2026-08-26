@@ -1,457 +1,235 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="pt-BR">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="55.984.709 LEANDRO ECCLISSI ROCHA - ME - Informações institucionais e Política de Privacidade.">
-
-  <title>55.984.709 LEANDRO ECCLISSI ROCHA - ME</title>
-
-  <style>
-
-    *{margin:0;padding:0;box-sizing:border-box}
-
-    body{
-
-      font-family:Arial,Helvetica,sans-serif;
-
-      background:#f5f7fa;
-
-      color:#1f2937;
-
-      line-height:1.6;
-
-    }
-
-    header{
-
-      background:linear-gradient(135deg,#0f3d66,#1677b8);
-
-      color:#fff;
-
-      padding:80px 20px;
-
-      text-align:center;
-
-    }
-
-    header h1{
-
-      font-size:42px;
-
-      margin-bottom:15px;
-
-    }
-
-    header p{
-
-      max-width:760px;
-
-      margin:auto;
-
-      font-size:18px;
-
-    }
-
-    nav{
-
-      background:#0f3d66;
-
-      padding:15px;
-
-      text-align:center;
-
-    }
-
-    nav a{
-
-      color:#fff;
-
-      margin:0 15px;
-
-      text-decoration:none;
-
-      font-weight:bold;
-
-    }
-
-    .container{
-
-      width:90%;
-
-      max-width:1050px;
-
-      margin:auto;
-
-    }
-
-    section{
-
-      padding:60px 0;
-
-    }
-
-    h2{
-
-      color:#0f3d66;
-
-      margin-bottom:20px;
-
-    }
-
-    .card{
-
-      background:#fff;
-
-      border-radius:12px;
-
-      padding:28px;
-
-      margin-bottom:20px;
-
-      box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-    }
-
-    .grid{
-
-      display:grid;
-
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-
-      gap:20px;
-
-    }
-
-    ul{
-
-      padding-left:20px;
-
-    }
-
-    footer{
-
-      background:#102536;
-
-      color:#d1d5db;
-
-      text-align:center;
-
-      padding:35px 20px;
-
-      margin-top:40px;
-
-    }
-
-    @media(max-width:700px){
-
-      header h1{font-size:30px}
-
-      nav a{display:inline-block;margin:8px}
-
-    }
-
-  </style>
-
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Central de Atendimento</title>
+
+<style>
+:root{
+  --blue:#1d4ed8;
+  --primary:#2563eb;
+  --primary2:#1e40af;
+  --text:#0f172a;
+  --muted:#64748b;
+  --shadow:0 18px 50px rgba(30,64,175,.18);
+}
+
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#eff6ff,#ffffff);
+  color:var(--text);
+}
+
+.container{max-width:1100px;margin:auto;padding:40px 20px}
+
+.header{display:flex;align-items:center;gap:14px;margin-bottom:40px}
+
+.logo{
+  width:46px;height:46px;border-radius:14px;
+  background:#fff;border:1px solid rgba(0,0,0,.1);
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+  object-fit:contain;
+}
+
+.header h1{margin:0;font-size:22px;color:var(--primary2)}
+.header span{font-size:13px;color:var(--muted)}
+
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+
+.hero h2{font-size:34px;margin:0}
+.hero p{margin-top:12px;line-height:1.5;color:rgba(15,23,42,.72)}
+
+.btn{
+  display:inline-block;
+  margin-top:18px;
+  padding:14px 24px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--primary2),var(--primary));
+  color:#fff;
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:0 18px 40px rgba(37,99,235,.35);
+}
+
+.card{
+  background:#fff;
+  padding:18px;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+
+.service{
+  display:block;
+  padding:14px;
+  margin-bottom:10px;
+  border-radius:16px;
+  background:rgba(37,99,235,.08);
+  border:1px solid rgba(37,99,235,.22);
+  font-weight:800;
+  text-decoration:none;
+  color:var(--text);
+}
+
+.service:hover{
+  background:rgba(37,99,235,.14);
+}
+
+.service span{
+  float:right;
+  color:var(--primary2);
+}
+
+.split{
+  margin-top:80px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:center;
+}
+
+.split h3{font-size:28px;margin:0}
+.split h4{margin-top:10px;font-size:18px;color:var(--primary)}
+.split p{margin-top:10px;line-height:1.6;color:var(--muted)}
+
+.image{
+  height:320px;
+  border-radius:22px;
+  background:url("https://i.imgur.com/Prh9fyG.png") center/cover no-repeat;
+  box-shadow:var(--shadow);
+}
+
+.values{
+  margin-top:90px;
+  background:var(--blue);
+  color:#fff;
+  padding:60px 20px;
+}
+
+.values h3{text-align:center;font-size:28px;margin:0;color:#fff}
+
+.grid{
+  max-width:1100px;
+  margin:40px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.box{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:18px;
+  padding:20px;
+}
+
+.box strong{font-size:18px;color:#bfdbfe}
+.box p{margin-top:10px;color:rgba(255,255,255,.75);line-height:1.6}
+
+footer{
+  background:#fff;
+  border-top:1px solid rgba(37,99,235,.18);
+  padding:20px 0;
+  text-align:center;
+  color:var(--muted);
+}
+
+@media(max-width:900px){
+  .hero,.split,.grid{grid-template-columns:1fr}
+  .hero h2{font-size:28px}
+}
+</style>
 </head>
 
 <body>
 
-<nav>
+<script>
+  const WHATSAPP_ATENDIMENTO = "5513982089288";
+  const WHATSAPP_2VIA       = "5513982089288";
+  const WHATSAPP_SUPORTE    = "5513982089288";
+  const WHATSAPP_OUTROS     = "5513982089288";
+</script>
 
-  <a href="#empresa">Empresa</a>
-
-  <a href="#atividade">Atividade</a>
-
-  <a href="#privacidade">Privacidade</a>
-
-</nav>
-
-<header>
-
-  <h1>55.984.709 LEANDRO ECCLISSI ROCHA - ME</h1>
-
-  <p>
-
-    Comércio a varejo de peças e acessórios novos para veículos automotores,
-
-    com informações institucionais e compromisso com a transparência.
-
-  </p>
-
-</header>
-
-<main class="container">
-
-<section id="empresa">
-
-  <h2>Sobre a empresa</h2>
-
-  <div class="card">
-
-    <p>
-
-      A empresa <strong>55.984.709 LEANDRO ECCLISSI ROCHA - ME</strong>,
-
-      inscrita no CNPJ sob o número <strong>55.984.709/0001-60</strong>,
-
-      foi fundada em <strong>18 de julho de 2024</strong> e possui sede
-
-      na cidade de <strong>São Paulo, Estado de São Paulo</strong>.
-
-    </p>
-
-    <br>
-
-    <p>
-
-      Conforme as informações cadastrais fornecidas, a empresa encontra-se
-
-      com situação cadastral <strong>ATIVA</strong>.
-
-    </p>
-
+<div class="container">
+  <div class="header">
+    <img src="https://i.imgur.com/hR4J8QL.png" class="logo" alt="Logo">
+    <div>
+      <h1>Central de Atendimento</h1>
+      <span>Serviços e suporte via WhatsApp</span>
+    </div>
   </div>
 
+  <div class="hero">
+    <div>
+      <h2>Solicite Atendimento</h2>
+      <p>Selecione o serviço desejado e inicie o atendimento seguro pelo WhatsApp.</p>
+
+      <a class="btn" id="btnAtendimento" href="#">
+        Iniciar Atendimento Seguro
+      </a>
+    </div>
+
+    <div class="card">
+      <a class="service" id="svc2Via" href="#">
+        2ª Via de Boleto <span>Acessar</span>
+      </a>
+
+      <a class="service" id="svcSuporte" href="#">
+        Suporte Técnico <span>Acessar</span>
+      </a>
+
+      <a class="service" id="svcOutros" href="#">
+        Outros Assuntos <span>Acessar</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="split">
+    <div>
+      <h3>Soluções na palma<br>da sua mão</h3>
+      <h4>Facilite seu atendimento</h4>
+
+      <p>Tenha um fluxo simples, rápido e seguro para solicitar suporte e serviços.</p>
+
+      <p>
+        Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros,
+        que tornem o dia a dia do cliente mais fácil.
+      </p>
+    </div>
+
+    <div class="image"></div>
+  </div>
+</div>
+
+<div class="values">
+  <h3>Compromissos</h3>
   <div class="grid">
-
-    <div class="card">
-
-      <h3>CNPJ</h3>
-
-      <p>55.984.709/0001-60</p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Fundação</h3>
-
-      <p>18/07/2024</p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Localização</h3>
-
-      <p>São Paulo - SP</p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Situação</h3>
-
-      <p>ATIVA</p>
-
-    </div>
-
+    <div class="box"><strong>01 ✓ Transparência</strong><p>Nosso compromisso com a transparência cria confiança.</p></div>
+    <div class="box"><strong>02 ✓ Seriedade</strong><p>Relações sólidas baseadas em integridade.</p></div>
+    <div class="box"><strong>03 ✓ Ética</strong><p>Atuação ética e responsável.</p></div>
   </div>
-
-</section>
-
-<section id="atividade">
-
-  <h2>Atividade principal</h2>
-
-  <div class="card">
-
-    <p>
-
-      A principal atividade econômica da empresa é o
-
-      <strong>Comércio a varejo de peças e acessórios novos para veículos automotores</strong>.
-
-    </p>
-
-    <br>
-
-    <p>
-
-      A empresa atua no segmento de comercialização de peças e acessórios
-
-      destinados a veículos automotores, atendendo às necessidades do mercado
-
-      varejista automotivo.
-
-    </p>
-
-  </div>
-
-</section>
-
-<section id="privacidade">
-
-  <h2>Política de Privacidade</h2>
-
-  <div class="card">
-
-    <h3>1. Compromisso com a privacidade</h3>
-
-    <p>
-
-      A empresa valoriza a privacidade e a proteção dos dados pessoais dos
-
-      usuários deste site, adotando práticas compatíveis com a legislação
-
-      brasileira aplicável.
-
-    </p>
-
-    <br>
-
-    <h3>2. Dados que podem ser coletados</h3>
-
-    <p>Dependendo da utilização do site, poderão ser coletados:</p>
-
-    <ul>
-
-      <li>Nome e informações fornecidas voluntariamente;</li>
-
-      <li>Dados de contato;</li>
-
-      <li>Informações enviadas por formulários;</li>
-
-      <li>Dados técnicos de navegação, como endereço IP e navegador.</li>
-
-    </ul>
-
-    <br>
-
-    <h3>3. Finalidades do tratamento</h3>
-
-    <ul>
-
-      <li>Responder solicitações e dúvidas;</li>
-
-      <li>Fornecer informações solicitadas;</li>
-
-      <li>Melhorar o funcionamento e a segurança do site;</li>
-
-      <li>Cumprir obrigações legais;</li>
-
-      <li>Exercer direitos em processos administrativos ou judiciais.</li>
-
-    </ul>
-
-    <br>
-
-    <h3>4. Compartilhamento</h3>
-
-    <p>
-
-      Os dados pessoais não são comercializados. O compartilhamento poderá
-
-      ocorrer apenas quando necessário para cumprimento de obrigações legais,
-
-      prestação de serviços ou exercício regular de direitos.
-
-    </p>
-
-    <br>
-
-    <h3>5. Cookies</h3>
-
-    <p>
-
-      Este site poderá utilizar cookies e tecnologias semelhantes para melhorar
-
-      a experiência do usuário, garantir o funcionamento adequado e obter
-
-      informações estatísticas.
-
-    </p>
-
-    <br>
-
-    <h3>6. Segurança</h3>
-
-    <p>
-
-      São adotadas medidas técnicas e administrativas razoáveis para proteger
-
-      os dados contra acessos não autorizados, perda, alteração ou divulgação
-
-      indevida.
-
-    </p>
-
-    <br>
-
-    <h3>7. Direitos do titular</h3>
-
-    <p>
-
-      Nos termos da Lei nº 13.709/2018 (Lei Geral de Proteção de Dados - LGPD),
-
-      o titular poderá exercer os direitos previstos na legislação aplicável.
-
-    </p>
-
-    <br>
-
-    <h3>8. Retenção dos dados</h3>
-
-    <p>
-
-      Os dados poderão ser mantidos pelo período necessário para cumprir as
-
-      finalidades informadas, obrigações legais ou exercício regular de direitos.
-
-    </p>
-
-    <br>
-
-    <h3>9. Alterações desta política</h3>
-
-    <p>
-
-      Esta Política de Privacidade poderá ser atualizada para refletir mudanças
-
-      legais, operacionais ou tecnológicas. A versão publicada neste site será
-
-      considerada a vigente.
-
-    </p>
-
-    <br>
-
-    <h3>10. Legislação aplicável</h3>
-
-    <p>
-
-      Esta política é regida pela legislação brasileira, especialmente pela
-
-      Lei nº 13.709/2018 - Lei Geral de Proteção de Dados Pessoais (LGPD).
-
-    </p>
-
-  </div>
-
-</section>
-
-</main>
+</div>
 
 <footer>
-
-  <p><strong>55.984.709 LEANDRO ECCLISSI ROCHA - ME</strong></p>
-
-  <p>CNPJ: 55.984.709/0001-60</p>
-
-  <p>São Paulo - SP</p>
-
-  <br>
-
-  <p>©️ 2026 Todos os direitos reservados.</p>
-
+©️ <span id="y"></span> Central de Atendimento • Todos os direitos reservados
 </footer>
 
-</body>
+<script>
+  function waLink(numero, servico){
+    const msg = "Olá! Preciso de atendimento sobre: " + servico;
+    return "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+  }
 
+  document.getElementById("btnAtendimento").href = "https://wa.me/" + WHATSAPP_ATENDIMENTO;
+
+  document.getElementById("svc2Via").href    = waLink(WHATSAPP_2VIA, "2ª Via");
+  document.getElementById("svcSuporte").href = waLink(WHATSAPP_SUPORTE, "Suporte Técnico");
+  document.getElementById("svcOutros").href  = waLink(WHATSAPP_OUTROS, "Outros Assuntos");
+
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>
