@@ -1,236 +1,96 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Central de Atendimento</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicite atendimento, suporte técnico e serviços pelo WhatsApp de forma simples, rápida e segura.">
+  <meta name="theme-color" content="#eaf4ff">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root{--ink:#10254a;--muted:#61718b;--blue:#1456d8;--sky:#eaf4ff;--sky-2:#d6ebff;--green:#20c876;--line:#dce8f4;--white:#fff;--shadow:0 22px 55px rgba(27,72,132,.12);--radius:24px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f9fcff;color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.page-shell{overflow:hidden}.site-header{max-width:1240px;margin:auto;padding:25px 5vw;display:flex;justify-content:space-between;align-items:center}.brand{display:flex;gap:11px;align-items:center;font:600 15px Manrope,sans-serif;letter-spacing:-.03em}.brand strong{font-weight:800}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--blue);transform:rotate(-7deg);box-shadow:0 8px 18px rgba(20,86,216,.2)}.brand-mark:before{content:"";width:17px;height:13px;border:2px solid #fff;border-radius:7px;transform:rotate(7deg);position:absolute}.brand-mark span{width:7px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:translate(1px,-1px) rotate(-40deg)}.header-link{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.05em}.header-link span{font-size:17px;margin-left:6px}.section-pad{max-width:1240px;margin:auto;padding-left:5vw;padding-right:5vw}.hero{min-height:645px;display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:4vw;padding-top:54px;padding-bottom:75px}.eyebrow,.section-kicker{display:flex;align-items:center;gap:9px;font-size:10px;font-weight:800;letter-spacing:.13em;color:var(--blue)}.status-dot{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 0 5px rgba(32,200,118,.14)}h1,h2,h3,p{margin-top:0}.hero h1{max-width:620px;margin:23px 0 20px;font:800 clamp(44px,6.1vw,78px)/.98 Manrope,sans-serif;letter-spacing:-.075em}.hero h1 em,.benefits h2 em{color:var(--blue);font-style:normal}.hero-lead{max-width:515px;font-size:17px;line-height:1.75;color:var(--muted)}.hero-actions{display:flex;align-items:center;gap:22px;margin:34px 0 31px}.button{display:inline-flex;align-items:center;gap:11px;padding:16px 19px;border-radius:13px;font-size:12px;font-weight:800;letter-spacing:.01em;transition:.22s ease}.button:hover,.button:focus-visible{transform:translateY(-3px);box-shadow:0 12px 25px rgba(20,86,216,.22)}.button:focus-visible,a:focus-visible{outline:3px solid #ffbd4a;outline-offset:4px}.button-whatsapp{color:#063820;background:var(--green)}.wa-icon{font-size:20px;font-weight:700;line-height:0}.arrow{font-size:17px}.text-link{color:var(--muted);font-size:12px;font-weight:700}.text-link span{margin-left:8px;color:var(--blue);font-size:16px}.trust-line{display:flex;align-items:center;gap:10px;color:#8291a5;font-size:11px}.avatar-stack{display:flex;padding-left:4px}.avatar-stack i{width:22px;height:22px;border:2px solid #fff;border-radius:50%;margin-left:-5px;background:#b6d5f3}.avatar-stack i:nth-child(2){background:#89b5ea}.avatar-stack i:nth-child(3){background:#547fc0}.hero-art{height:465px;position:relative;display:grid;place-items:center}.art-orb{position:absolute;border-radius:50%;background:var(--sky-2)}.orb-one{width:360px;height:360px;right:4%;top:5%;opacity:.72}.orb-two{width:160px;height:160px;left:5%;bottom:10%;background:#f4faff}.flow-card{z-index:1;width:min(100%,340px);padding:24px;border:1px solid rgba(255,255,255,.8);border-radius:25px;background:rgba(255,255,255,.9);box-shadow:var(--shadow);transform:rotate(3deg)}.flow-card-top{display:flex;align-items:center;gap:9px;color:#8090a7;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.tiny-logo{display:grid;place-items:center;width:25px;height:25px;border-radius:8px;background:var(--blue);color:#fff;font-size:13px}.flow-dots{margin-left:auto;color:#b7c6d8;letter-spacing:3px}.flow-title{margin:30px 0 28px;font:800 31px Manrope;letter-spacing:-.07em}.flow-steps{display:flex;align-items:center}.step{display:grid;place-items:center;width:30px;height:30px;border:1px solid #c8d9ec;border-radius:50%;color:#94a6bd;font-size:11px;font-weight:800}.step.active{border-color:var(--blue);background:var(--blue);color:#fff}.step-line{height:1px;background:#d5e2f0;flex:1;margin:0 7px}.step-line.active{background:var(--blue)}.flow-labels{display:flex;justify-content:space-between;margin-top:9px;color:#99a7ba;font-size:9px;font-weight:700}.flow-labels span:first-child{color:var(--blue)}.mini-message{display:flex;align-items:center;gap:9px;margin-top:28px;padding:11px;border-radius:12px;background:#eff8f4;color:#289967;font-size:10px;font-weight:700}.mini-check{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--green);color:#fff}.float-chip{position:absolute;z-index:2;background:#fff;padding:11px 13px;border:1px solid #e3edf7;border-radius:12px;box-shadow:0 13px 30px rgba(34,76,124,.12);font-size:10px;font-weight:800}.chip-top{top:19%;right:1%;color:var(--blue)}.chip-top b{color:#ffb344;margin-left:7px}.chip-bottom{bottom:19%;left:3%;color:#71839c}.chip-bottom b{color:var(--blue);font-size:15px;margin-right:6px}.services{padding-top:90px;padding-bottom:115px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}.section-kicker{margin-bottom:14px}.section-heading h2,.commitment-intro h2{font:800 clamp(33px,4vw,52px)/1.03 Manrope;letter-spacing:-.07em;margin:0}.section-heading h2 span,.commitment-intro h2 span{color:var(--blue)}.section-heading p{max-width:325px;margin:0;color:var(--muted);font-size:13px;line-height:1.65}.service-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:13px}.service-card{min-height:178px;display:flex;flex-direction:column;justify-content:space-between;padding:20px;border:1px solid var(--line);border-radius:17px;background:#fff;transition:.22s ease}.service-card:hover{transform:translateY(-5px);border-color:#b4cff0;box-shadow:0 14px 30px rgba(33,87,145,.1)}.service-main{grid-row:span 2;background:var(--blue);border-color:var(--blue);color:#fff;min-height:370px}.card-number{font-size:10px;font-weight:800;letter-spacing:.1em;color:#a3b3c9}.service-main .card-number{color:#b6cdfb}.service-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:#edf5ff;color:var(--blue);font-size:20px}.service-main .service-icon{background:rgba(255,255,255,.15);color:#fff}.service-card-body{display:flex;flex-direction:column;gap:7px}.service-card strong{font:700 16px Manrope;letter-spacing:-.04em}.service-card small{color:#8696aa;font-size:11px}.service-main small{color:#b8d0fc}.card-arrow{align-self:flex-end;font-size:20px;color:var(--blue)}.service-main .card-arrow{color:#fff}.benefits{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:7vw;padding-top:110px;padding-bottom:110px;background:var(--ink);color:#fff;max-width:none;padding-left:max(5vw,calc((100% - 1140px)/2));padding-right:max(5vw,calc((100% - 1140px)/2))}.benefits .section-kicker{color:#86b0f4}.benefits h2{font:800 clamp(39px,5vw,64px)/.98 Manrope;letter-spacing:-.075em;margin:0 0 22px}.benefit-subtitle{color:#91c5ff;font:700 16px Manrope;margin-bottom:13px}.benefit-copy>p:not(.benefit-subtitle):not(.benefit-note){max-width:415px;color:#c6d3e9;font-size:14px;line-height:1.7}.benefit-note{max-width:430px;padding-left:16px;border-left:2px solid #3c639d;color:#92a7c8;font-size:11px;line-height:1.7}.button-light{margin-top:14px;background:#fff;color:var(--blue)}.benefit-visual{min-height:370px;position:relative;display:grid;place-items:center}.visual-ring{position:absolute;border:1px solid rgba(132,178,243,.25);border-radius:50%;width:320px;height:320px}.ring-two{width:235px;height:235px;border-color:rgba(132,178,243,.16)}.visual-phone{position:relative;width:215px;height:292px;padding:34px 16px 16px;border-radius:30px;background:#f5faff;color:var(--ink);box-shadow:0 20px 50px rgba(0,0,0,.2);transform:rotate(5deg)}.phone-notch{position:absolute;top:12px;left:78px;width:58px;height:5px;border-radius:8px;background:#d5e3f2}.phone-header{display:flex;justify-content:space-between;font-size:9px;font-weight:800}.phone-header b{color:#9aabc1;letter-spacing:2px}.phone-bubble{margin:20px 0 17px;padding:12px;border-radius:11px 11px 11px 2px;background:#e6f1ff;color:#4d6483;font-size:9px;line-height:1.5}.phone-option{display:flex;align-items:center;gap:7px;margin-top:9px;padding:11px 8px;border-radius:10px;background:var(--blue);color:#fff;font-size:8px;font-weight:700}.phone-option span:first-child{display:grid;place-items:center;width:18px;height:18px;border-radius:6px;background:rgba(255,255,255,.2);font-size:11px}.phone-option b{margin-left:auto;font-size:15px}.phone-option.soft{background:#e9f8f0;color:#218a5e}.visual-caption{position:absolute;right:3%;bottom:6%;padding:10px 13px;border:1px solid rgba(139,184,248,.25);border-radius:10px;color:#9bbbe7;font-size:10px;font-weight:700}.commitments{display:grid;grid-template-columns:.75fr 1.25fr;gap:9vw;padding-top:120px;padding-bottom:120px}.commitment-intro h2{font-size:clamp(35px,4.3vw,55px)}.commitment-list{border-top:1px solid var(--line)}.commitment-item{display:grid;grid-template-columns:48px 1fr 27px;gap:20px;align-items:start;padding:26px 0;border-bottom:1px solid var(--line)}.commitment-num{color:var(--blue);font:700 12px Manrope}.commitment-item h3{margin:0 0 8px;font:800 21px Manrope;letter-spacing:-.05em}.commitment-item p{margin:0;color:var(--muted);font-size:12px}.commitment-check{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#e8f8f0;color:#1aa869;font-size:13px}.site-footer{max-width:1240px;margin:auto;padding:28px 5vw;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand{font-size:12px}.footer-brand .brand-mark{width:27px;height:27px;border-radius:8px}.footer-brand .brand-mark:before{width:13px;height:10px}.site-footer p{margin:0;color:#9aa8ba;font-size:10px}.site-footer p span{color:#ccdae8;margin:0 6px}.footer-top{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--line);border-radius:9px;color:var(--blue);font-weight:800}.reveal{animation:rise .65s both}.reveal-delay{animation-delay:.12s}.reveal-delay-1{animation-delay:.08s}.reveal-delay-2{animation-delay:.16s}.reveal-delay-3{animation-delay:.24s}@keyframes rise{from{opacity:0;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}@media(max-width:800px){.site-header{padding-top:19px}.header-link{display:none}.hero{display:block;padding-top:55px;padding-bottom:65px}.hero h1{font-size:clamp(45px,13vw,68px)}.hero-lead{font-size:15px}.hero-actions{align-items:flex-start;flex-direction:column;gap:17px}.hero-art{height:390px;margin-top:15px}.orb-one{width:300px;height:300px}.services{padding-top:75px;padding-bottom:80px}.section-heading{display:block}.section-heading p{margin-top:17px}.service-grid{grid-template-columns:1fr 1fr}.service-main{grid-column:span 2;grid-row:auto;min-height:235px}.benefits{display:block;padding-top:80px;padding-bottom:80px}.benefit-visual{margin-top:50px}.commitments{display:block;padding-top:80px;padding-bottom:80px}.commitment-list{margin-top:45px}.site-footer{flex-wrap:wrap}.site-footer p{order:3;width:100%}}@media(max-width:480px){.service-grid{display:block}.service-card,.service-main{min-height:160px;margin-bottom:12px}.service-main{min-height:205px}.flow-card{width:290px}.float-chip{font-size:9px}.chip-top{right:-1%}.chip-bottom{left:-2%}.site-footer{align-items:flex-start;flex-direction:column}.footer-top{align-self:flex-end;margin-top:-38px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{animation:none}.button,.service-card{transition:none}}
 
-<style>
-:root{
-  --blue:#1d4ed8;
-  --primary:#2563eb;
-  --primary2:#1e40af;
-  --text:#0f172a;
-  --muted:#64748b;
-  --shadow:0 18px 50px rgba(30,64,175,.18);
-}
-
-*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
-
-body{
-  margin:0;
-  background:linear-gradient(180deg,#eff6ff,#ffffff);
-  color:var(--text);
-}
-
-.container{max-width:1100px;margin:auto;padding:40px 20px}
-
-.header{display:flex;align-items:center;gap:14px;margin-bottom:40px}
-
-.logo{
-  width:46px;height:46px;border-radius:14px;
-  background:#fff;border:1px solid rgba(0,0,0,.1);
-  box-shadow:0 10px 25px rgba(0,0,0,.12);
-  object-fit:contain;
-}
-
-.header h1{margin:0;font-size:22px;color:var(--primary2)}
-.header span{font-size:13px;color:var(--muted)}
-
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
-
-.hero h2{font-size:34px;margin:0}
-.hero p{margin-top:12px;line-height:1.5;color:rgba(15,23,42,.72)}
-
-.btn{
-  display:inline-block;
-  margin-top:18px;
-  padding:14px 24px;
-  border-radius:999px;
-  background:linear-gradient(135deg,var(--primary2),var(--primary));
-  color:#fff;
-  font-weight:800;
-  text-decoration:none;
-  box-shadow:0 18px 40px rgba(37,99,235,.35);
-}
-
-.card{
-  background:#fff;
-  padding:18px;
-  border-radius:22px;
-  box-shadow:var(--shadow);
-}
-
-.service{
-  display:block;
-  padding:14px;
-  margin-bottom:10px;
-  border-radius:16px;
-  background:rgba(37,99,235,.08);
-  border:1px solid rgba(37,99,235,.22);
-  font-weight:800;
-  text-decoration:none;
-  color:var(--text);
-}
-
-.service:hover{
-  background:rgba(37,99,235,.14);
-}
-
-.service span{
-  float:right;
-  color:var(--primary2);
-}
-
-.split{
-  margin-top:80px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
-  align-items:center;
-}
-
-.split h3{font-size:28px;margin:0}
-.split h4{margin-top:10px;font-size:18px;color:var(--primary)}
-.split p{margin-top:10px;line-height:1.6;color:var(--muted)}
-
-.image{
-  height:320px;
-  border-radius:22px;
-  background:url("https://i.imgur.com/Prh9fyG.png") center/cover no-repeat;
-  box-shadow:var(--shadow);
-}
-
-.values{
-  margin-top:90px;
-  background:var(--blue);
-  color:#fff;
-  padding:60px 20px;
-}
-
-.values h3{text-align:center;font-size:28px;margin:0;color:#fff}
-
-.grid{
-  max-width:1100px;
-  margin:40px auto 0;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.box{
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.16);
-  border-radius:18px;
-  padding:20px;
-}
-
-.box strong{font-size:18px;color:#bfdbfe}
-.box p{margin-top:10px;color:rgba(255,255,255,.75);line-height:1.6}
-
-footer{
-  background:#fff;
-  border-top:1px solid rgba(37,99,235,.18);
-  padding:20px 0;
-  text-align:center;
-  color:var(--muted);
-}
-
-@media(max-width:900px){
-  .hero,.split,.grid{grid-template-columns:1fr}
-  .hero h2{font-size:28px}
-}
-</style>
+  </style>
+  <title>Central de Atendimento | Suporte via WhatsApp</title>
 </head>
-
 <body>
-
-<script>
-  const WHATSAPP_ATENDIMENTO = "5511961523912";
-  const WHATSAPP_2VIA       = "5511961523912";
-  const WHATSAPP_SUPORTE    = "5511961523912";
-  const WHATSAPP_OUTROS     = "5511961523912";
-</script>
-
-<div class="container">
-  <div class="header">
-    <img src="https://i.imgur.com/w51AXxP.png" class="logo" alt="Logo">
-    <div>
-      <h1>Central de Atendimento</h1>
-      <span>Serviços e suporte via WhatsApp</span>
-    </div>
-  </div>
-
-  <div class="hero">
-    <div>
-      <h2>Solicite Atendimento</h2>
-      <p>Selecione o serviço desejado e inicie o atendimento seguro pelo WhatsApp.</p>
-
-      <a class="btn" id="btnAtendimento" href="#">
-        Iniciar Atendimento Seguro
+  <div class="page-shell">
+    <header class="site-header" aria-label="Cabeçalho principal">
+      <a class="brand" href="#inicio" aria-label="Central de Atendimento - início">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span class="brand-name">Central de <strong>Atendimento</strong></span>
       </a>
-    </div>
+      <a class="header-link" href="#servicos">Ver serviços <span aria-hidden="true">↗</span></a>
+    </header>
 
-    <div class="card">
-      <a class="service" id="svc2Via" href="#">
-        2ª Via de Boleto <span>Acessar</span>
-      </a>
+    <main id="inicio">
+      <section class="hero section-pad" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Atendimento humano e seguro</div>
+          <h1 id="hero-title">Resolva tudo com <em>mais facilidade.</em></h1>
+          <p class="hero-lead">Serviços e suporte via WhatsApp, com orientação clara para você seguir em frente sem complicação.</p>
+          <div class="hero-actions">
+            <a class="button button-whatsapp" data-whatsapp="geral" href="#servicos"><span class="wa-icon" aria-hidden="true">◔</span> Iniciar atendimento seguro <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#compromissos">Por que confiar? <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="trust-line"><span class="avatar-stack" aria-hidden="true"><i></i><i></i><i></i></span><span>Atendimento simples, rápido e seguro</span></div>
+        </div>
+        <div class="hero-art reveal reveal-delay" aria-label="Ilustração de um fluxo simples de atendimento" role="img">
+          <div class="art-orb orb-one"></div><div class="art-orb orb-two"></div>
+          <div class="flow-card">
+            <div class="flow-card-top"><span class="tiny-logo" aria-hidden="true">✓</span><span>Seu atendimento</span><span class="flow-dots">•••</span></div>
+            <div class="flow-title">Sem complicação.</div>
+            <div class="flow-steps"><span class="step active">1</span><div class="step-line active"></div><span class="step">2</span><div class="step-line"></div><span class="step">3</span></div>
+            <div class="flow-labels"><span>Escolha</span><span>Converse</span><span>Resolva</span></div>
+            <div class="mini-message"><span class="mini-check">✓</span><span>Pronto para ajudar você</span></div>
+          </div>
+          <span class="float-chip chip-top">Feito para você <b>✦</b></span><span class="float-chip chip-bottom"><b>↗</b> Direto ao ponto</span>
+        </div>
+      </section>
 
-      <a class="service" id="svcSuporte" href="#">
-        Suporte Técnico <span>Acessar</span>
-      </a>
+      <section class="services section-pad" id="servicos" aria-labelledby="services-title">
+        <div class="section-heading reveal"><div><span class="section-kicker">ESCOLHA O CAMINHO MAIS RÁPIDO</span><h2 id="services-title">Solicite <span>Atendimento</span></h2></div><p>Selecione o serviço desejado e inicie o atendimento seguro pelo WhatsApp.</p></div>
+        <div class="service-grid">
+          <a class="service-card service-main reveal" data-whatsapp="geral" href="#servicos"><span class="card-number">01</span><span class="service-icon icon-chat" aria-hidden="true">◔</span><span class="service-card-body"><strong>Iniciar Atendimento Seguro</strong><small>Fale com a nossa equipe pelo WhatsApp</small></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+          <a class="service-card reveal reveal-delay-1" data-whatsapp="boleto" href="#servicos"><span class="card-number">02</span><span class="service-icon" aria-hidden="true">▤</span><span class="service-card-body"><strong>2ª Via de Boleto</strong><small>Acesse sua segunda via</small></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+          <a class="service-card reveal reveal-delay-2" data-whatsapp="tecnico" href="#servicos"><span class="card-number">03</span><span class="service-icon" aria-hidden="true">⌁</span><span class="service-card-body"><strong>Suporte Técnico</strong><small>Conte com ajuda especializada</small></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+          <a class="service-card reveal reveal-delay-3" data-whatsapp="outros" href="#servicos"><span class="card-number">04</span><span class="service-icon" aria-hidden="true">⋯</span><span class="service-card-body"><strong>Outros Assuntos</strong><small>Estamos aqui para ouvir você</small></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </section>
 
-      <a class="service" id="svcOutros" href="#">
-        Outros Assuntos <span>Acessar</span>
-      </a>
-    </div>
+      <section class="benefits section-pad" aria-labelledby="benefits-title">
+        <div class="benefit-copy reveal"><span class="section-kicker light">UM JEITO MAIS SIMPLES DE RESOLVER</span><h2 id="benefits-title">Soluções na palma<br> <em>da sua mão</em></h2><p class="benefit-subtitle">Facilite seu atendimento</p><p>Tenha um fluxo simples, rápido e seguro para solicitar suporte e serviços.</p><p class="benefit-note">Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o dia a dia do cliente mais fácil.</p><a class="button button-light" data-whatsapp="geral" href="#servicos">Falar com atendimento <span aria-hidden="true">↗</span></a></div>
+        <div class="benefit-visual reveal reveal-delay"><div class="visual-ring ring-one"></div><div class="visual-ring ring-two"></div><div class="visual-phone"><div class="phone-notch"></div><div class="phone-header"><span>Olá, tudo bem?</span><b>•••</b></div><div class="phone-bubble">Como podemos ajudar hoje?</div><div class="phone-option"><span>✓</span><span>Escolher um serviço</span><b>›</b></div><div class="phone-option soft"><span>◔</span><span>Falar no WhatsApp</span><b>›</b></div></div><span class="visual-caption">Seu tempo importa.</span></div>
+      </section>
+
+      <section class="commitments section-pad" id="compromissos" aria-labelledby="commitments-title">
+        <div class="commitment-intro reveal"><span class="section-kicker">O QUE GUIA O NOSSO TRABALHO</span><h2 id="commitments-title">Compromissos que<br><span>fazem diferença.</span></h2></div>
+        <div class="commitment-list"><article class="commitment-item reveal"><span class="commitment-num">01</span><div><h3>Transparência</h3><p>Nosso compromisso com a transparência cria confiança.</p></div><span class="commitment-check" aria-hidden="true">✓</span></article><article class="commitment-item reveal reveal-delay-1"><span class="commitment-num">02</span><div><h3>Seriedade</h3><p>Relações sólidas baseadas em integridade.</p></div><span class="commitment-check" aria-hidden="true">✓</span></article><article class="commitment-item reveal reveal-delay-2"><span class="commitment-num">03</span><div><h3>Ética</h3><p>Atuação ética e responsável.</p></div><span class="commitment-check" aria-hidden="true">✓</span></article></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><span></span></span><span class="brand-name">Central de <strong>Atendimento</strong></span></a><p>©️ 2026 Central de Atendimento <span>•</span> Todos os direitos reservados</p><a class="footer-top" href="#inicio" aria-label="Voltar ao início">↑</a></footer>
   </div>
+  <script>
+// Substitua pelo número real em formato internacional, sem espaços, + ou símbolos.
+const WHATSAPP_NUMBER = '5535991733306';
+const messages = {
+  geral: 'Olá! Gostaria de iniciar um atendimento seguro.',
+  boleto: 'Olá! Preciso da 2ª via do meu boleto.',
+  tecnico: 'Olá! Preciso de suporte técnico.',
+  outros: 'Olá! Gostaria de falar sobre outro assunto.'
+};
 
-  <div class="split">
-    <div>
-      <h3>Soluções na palma<br>da sua mão</h3>
-      <h4>Facilite seu atendimento</h4>
+document.querySelectorAll('[data-whatsapp]').forEach((link) => {
+  const type = link.dataset.whatsapp || 'geral';
+  const message = messages[type] || messages.geral;
+  link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+});
 
-      <p>Tenha um fluxo simples, rápido e seguro para solicitar suporte e serviços.</p>
-
-      <p>
-        Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros,
-        que tornem o dia a dia do cliente mais fácil.
-      </p>
-    </div>
-
-    <div class="image"></div>
-  </div>
-</div>
-
-<div class="values">
-  <h3>Compromissos</h3>
-  <div class="grid">
-    <div class="box"><strong>01 ✓ Transparência</strong><p>Nosso compromisso com a transparência cria confiança.</p></div>
-    <div class="box"><strong>02 ✓ Seriedade</strong><p>Relações sólidas baseadas em integridade.</p></div>
-    <div class="box"><strong>03 ✓ Ética</strong><p>Atuação ética e responsável.</p></div>
-  </div>
-</div>
-
-<footer>
-©️ <span id="y"></span> Central de Atendimento • Todos os direitos reservados
-</footer>
-
-<script>
-  function waLink(numero, servico){
-    const msg = "Olá! Preciso de atendimento sobre: " + servico;
-    return "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
-  }
-
-  document.getElementById("btnAtendimento").href = "https://wa.me/" + WHATSAPP_ATENDIMENTO;
-
-  document.getElementById("svc2Via").href    = waLink(WHATSAPP_2VIA, "2ª Via");
-  document.getElementById("svcSuporte").href = waLink(WHATSAPP_SUPORTE, "Suporte Técnico");
-  document.getElementById("svcOutros").href  = waLink(WHATSAPP_OUTROS, "Outros Assuntos");
-
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
-
+  </script>
 </body>
 </html>
-
